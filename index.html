@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylistka Rzęs Warszawa | Przedłużanie Rzęs 1:1, Volume, Mega Volume | Paulina</title>
+    <meta name="description" content="Profesjonalna stylizacja rzęs w Warszawie. Przedłużanie rzęs 1:1, Volume 2D-15D, Mega Volume, Wet Look. Dbam o każdy detal.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #d4b5b0;
+            --secondary-color: #8a7f8d;
+            --dark-color: #5a5560;
+            --light-color: #f9f6f4;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 70px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* HEADER */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 2rem;
+        }
+        
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        /* PRICING */
+        .pricing-table {
+            max-width: 900px;
+            margin: 40px auto 0;
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .table-content {
+            padding: 30px;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .price-row:last-child {
+            border-bottom: none;
+        }
+        
+        .price-name {
+            font-weight: 500;
+        }
+        
+        .price-value {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* TESTIMONIALS */
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .client-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+        }
+        
+        .client-rating {
+            color: #ffc107;
+            margin: 15px 0;
+        }
+        
+        /* CONTACT */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            background-color: var(--primary-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* FOOTER */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: var(--white);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                margin-top: 70px;
+                height: auto;
+                padding: 80px 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Lash<span>Studio</span></a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Strona główna</a></li>
+                    <li><a href="#about">O mnie</a></li>
+                    <li><a href="#services">Usługi</a></li>
+                    <li><a href="#pricing">Cennik</a></li>
+                    <li><a href="#testimonials">Opinie</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Profesjonalna Stylistka Rzęs w Warszawie</h1>
+            <p>Specjalizuję się w przedłużaniu rzęs metodą 1:1, Volume 2D-15D, Mega Volume i Wet Look. Dbam o każdy szczegół, aby Twoje rzęsy wyglądały naturalnie i pięknie.</p>
+            <a href="#contact" class="btn">Umów wizytę online</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" style="background-color: #fff;">
+        <div class="container">
+            <h2>O mnie - Paulina</h2>
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div style="flex: 1;">
+                    <p style="margin-bottom: 20px;">Cześć, jestem <strong>Paulina</strong>, certyfikowana stylistka rzęs z <strong>Warszawy</strong> z ponad 5-letnim doświadczeniem.</p>
+                    <p style="margin-bottom: 20px;">W mojej pracy <strong style="color: #d4b5b0;">dbam o każdy szczegół</strong> - od sterylności narzędzi, przez komfort klientki, po idealne dopasowanie rzęs do kształtu oka.</p>
+                    <p>Stale podnoszę swoje kwalifikacje, uczestnicząc w szkoleniach. Używam tylko najwyższej jakości produktów, które są bezpieczne dla oczu i zapewniają trwałe efekty.</p>
+                </div>
+                <div style="flex: 1; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paulina - stylistka rzęs" style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" style="background-color: #f9f6f4;">
+        <div class="container">
+            <h2>Usługi Stylizacji Rzęs</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Stylizacja klasyczna 1:1</h3>
+                    <p>Naturalne przedłużenie pojedynczej rzęsy własnej. Idealne na początek przygody z przedłużaniem rzęs.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Wet Look Rzęsy</h3>
+                    <p>Efekt mokrych, lśniących rzęs dla odważnych i nowoczesnych klientek. Dostępne w opcjach 2:1 i 3:1.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-feather-alt"></i>
+                    <h3>Volume 2D-5D</h3>
+                    <p>Rzęsy objętościowe, które dodają gęstości i dramatyzmu. Idealne dla wymagających efektu "wow".</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-crown"></i>
+                    <h3>Mega Volume 6D-15D</h3>
+                    <p>Ekstremalna gęstość i objętość dla najodważniejszych. Efekt pełnych, spektakularnych rzęs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" style="background-color: #fff;">
+        <div class="container">
+            <h2>Cennik</h2>
+            <div class="pricing-table">
+                <div class="table-content">
+                    <div class="price-row">
+                        <div class="price-name">Stylizacja klasyczna 1:1</div>
+                        <div class="price-value">180 zł</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-name">Wet Look 2:1</div>
+                        <div class="price-value">220 zł</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-name">Volume 2D-3D</div>
+                        <div class="price-value">230 zł</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-name">Volume 4D-5D</div>
+                        <div class="price-value">270 zł</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-name">Mega Volume 6D-8D</div>
+                        <div class="price-value">300 zł</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-name">Uzupełnienie (do 3 tygodni)</div>
+                        <div class="price-value">od 100 zł</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" style="background-color: #f9f6f4;">
+        <div class="container">
+            <h2>Opinie klientek</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="client-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Anna K.</h4>
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Paulina to najlepsza stylistka rzęs w Warszawie! Jej precyzja i dbałość o szczegóły są niesamowite. Moje rzęsy wyglądają naturalnie i pięknie. Zdecydowanie polecam!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="background-color: #fff;">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="contact-container">
+                <div>
+                    <h3 style="margin-bottom: 20px;">Umów się na wizytę</h3>
+                    <p style="margin-bottom: 30px;">Zadzwoń lub napisz, aby umówić się na zabieg stylizacji rzęs. Pracuję od poniedziałku do soboty w godzinach 9:00-18:00.</p>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+48 123 456 789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>paulinajuraszek901@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>ul. Kosmetyczna 15/3<br>00-001 Warszawa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 20px;">Wyślij wiadomość</h3>
+                    <form action="https://formspree.io/f/xdorgdnj" method="POST">
+                        <input type="hidden" name="_subject" value="Nowa wiadomość ze strony LashStudio">
+                        
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adres e-mail *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Numer telefonu</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Wiadomość *</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Wyślij wiadomość</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>LashStudio</h3>
+                    <p>Profesjonalny salon stylizacji rzęs w Warszawie. Specjalizuję się w przedłużaniu rzęs metodą 1:1, Volume i Mega Volume.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Godziny otwarcia</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;">Poniedziałek - Piątek: 9:00 - 18:00</li>
+                        <li style="margin-bottom: 10px;">Sobota: 10:00 - 16:00</li>
+                        <li>Niedziela: Zamknięte</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 LashStudio - Stylistka Rzęs Warszawa. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // MOBILE MENU
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // SMOOTH SCROLLING
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Zamknij menu mobilne po kliknięciu
+                    if (window.innerWidth <= 768) {
+                        nav.classList.remove('active');
+                        mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    }
+                }
+            });
+        });
+        
+        // FORM SUBMISSION
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Wysyłanie...';
+            submitBtn.disabled = true;
+            
+            // Wyślij formularz
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Wiadomość została wysłana! Odpowiem najszybciej jak to możliwe.');
+                    form.reset();
+                } else {
+                    alert('Wystąpił błąd. Spróbuj ponownie.');
+                }
+            })
+            .catch(error => {
+                alert('Błąd połączenia. Spróbuj ponownie później.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
